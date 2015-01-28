@@ -1,0 +1,1 @@
+json.(@qari, :id, :name, :arabic_name, :relative_path, :file_formats, :section, :home, :description)
