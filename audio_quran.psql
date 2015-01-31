@@ -44,10 +44,10 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: audios; Type: TABLE; Schema: public; Owner: mmahalwy; Tablespace: 
+-- Name: audio_files; Type: TABLE; Schema: public; Owner: mmahalwy; Tablespace: 
 --
 
-CREATE TABLE audios (
+CREATE TABLE audio_files (
     id integer NOT NULL,
     qari_id integer,
     sura_number integer,
@@ -59,7 +59,7 @@ CREATE TABLE audios (
 );
 
 
-ALTER TABLE audios OWNER TO mmahalwy;
+ALTER TABLE audio_files OWNER TO mmahalwy;
 
 --
 -- Name: qaris; Type: TABLE; Schema: public; Owner: mmahalwy; Tablespace: 
@@ -124,10 +124,10 @@ CREATE TABLE updates (
 ALTER TABLE updates OWNER TO mmahalwy;
 
 --
--- Data for Name: audios; Type: TABLE DATA; Schema: public; Owner: mmahalwy
+-- Data for Name: audio_files; Type: TABLE DATA; Schema: public; Owner: mmahalwy
 --
 
-COPY audios (id, qari_id, sura_number, filenum, file_name, extension, stream_count, download_count) FROM stdin;
+COPY audio_files (id, qari_id, sura_number, filenum, file_name, extension, stream_count, download_count) FROM stdin;
 1	1	1	\N	001.mp3	mp3	11223	10252
 2	1	1	\N	001.ogg	ogg	1	17
 3	1	2	\N	002.mp3	mp3	6555	5758
@@ -15010,7 +15010,7 @@ ALTER TABLE ONLY qaris
 -- Name: quran_pkey; Type: CONSTRAINT; Schema: public; Owner: mmahalwy; Tablespace: 
 --
 
-ALTER TABLE ONLY audios
+ALTER TABLE ONLY audio_files
     ADD CONSTRAINT quran_pkey PRIMARY KEY (id);
 
 
